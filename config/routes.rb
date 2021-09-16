@@ -8,10 +8,13 @@ Rails.application.routes.draw do
   # DOES NOT WORK, NOT THE BEST WAY WITHOUT RESOURCES
   # resource :about, only: [:index]
 
-  # resource :test, only [:show]
+  # resource :food, only: [:show]
 
-  # The correct way to do it for a single route 
-  get '/about' => 'about#index'
+  resources :about, only: [:index]
+  # type in bin/rails generate controller about to create the one route. (bin/rails generate scaffold controller will make all routes)
+
+  # Old way to do it for a single route 
+  # get '/about' => 'about#index'
 
   resource :cart, only: [:show] do
     post   :add_item
