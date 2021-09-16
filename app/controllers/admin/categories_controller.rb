@@ -1,5 +1,9 @@
 class Admin::CategoriesController < ApplicationController
 
+
+  http_basic_authenticate_with name: ENV["USERNAME"], password: ENV["PASSWORD"]
+
+
   # Send the categories to index 
   def index
     @categories = Category.order(id: :desc).all
@@ -19,7 +23,7 @@ class Admin::CategoriesController < ApplicationController
     else
       render :new
     end
-    
+
   end
 
   private
