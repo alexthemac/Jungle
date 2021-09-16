@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  # DOES NOT WORK, NOT THE BEST WAY WITHOUT RESOURCES
+  # resource :about, only: [:index]
+
+  # resource :test, only [:show]
+
+  # The correct way to do it for a single route 
+  get '/about' => 'about#index'
+
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
