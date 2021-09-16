@@ -1,5 +1,10 @@
 <h1>Categories Index</h1>
 
+<div class="well">
+<%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+</div>
+
+
 <%
  # Loop through each item in the @categories array
 # @categories array is defined inside of categories_controller 
