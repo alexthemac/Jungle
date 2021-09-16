@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   # DOES NOT WORK, NOT THE BEST WAY WITHOUT RESOURCES
   # resource :about, only: [:index]
 
-  # resource :food, only: [:show]
-
   resources :about, only: [:index]
   # type in bin/rails generate controller about to create the one route. (bin/rails generate scaffold controller will make all routes)
 
@@ -26,6 +24,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
+    resources :categories, only: [:index, :new, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
