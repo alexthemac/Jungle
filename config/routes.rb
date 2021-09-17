@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
 
-  # UNCOMMENT THIS WHEN DONE WITH USER AUTHENTICATION BELOW
   root to: 'products#index'
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
-  # DOES NOT WORK, NOT THE BEST WAY WITHOUT RESOURCES
-  # resource :about, only: [:index]
-
   resources :about, only: [:index]
-  # type in bin/rails generate controller about to create the controller and one route folder. (bin/rails generate scaffold controller will make all routes)
+  # type in bin/rails generate controller about to create the controller and one route folder. 
+  # (bin/rails generate scaffold controller will make all routes)
 
   # Old way to do it for a single route 
   # get '/about' => 'about#index'
@@ -29,16 +26,7 @@ Rails.application.routes.draw do
   end
 
 
-
   #USER AUTHENTICATION ROUTES BELOW (w9d4)
-  # This route sends requests to our naked url to the *cool* action in the *gif* controller.
-  # root to: 'gif#cool'
-
-  # I've created a gif controller so I have a page I can secure later. 
-  # This is optional (as is the root to: above).
-  # get '/cool' => 'gif#cool'
-  # get '/sweet' => 'gif#sweet'
-
   # These routes will be for signup. The first renders a form in the browse, the second will 
   # receive the form and create a user in our database using the data given to us by the user.
   get '/signup' => 'users#new'
@@ -48,6 +36,11 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
+
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

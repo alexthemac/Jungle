@@ -4,7 +4,10 @@ class UsersController < ApplicationController
   
 
   def create
+    # Create new user object based on what's entered in form
     user = User.new(user_params)
+
+    #user.save returns false if the correct inputs are not supplied (part of active record)
     if user.save
       session[:user_id] = user.id
       redirect_to '/'
@@ -15,7 +18,7 @@ class UsersController < ApplicationController
   
   private
 
-  # Sanitize input (to protect from injection attacks)
+  # Sanitize input from form (to protect from injection attacks)
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
