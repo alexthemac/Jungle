@@ -36,7 +36,15 @@ gem 'rmagick'
 gem 'stripe'
 gem 'faker'
 
+# Testing stuff
 gem 'rspec-rails', '~> 3.5'
+
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
+
 
 
 # Use Capistrano for deployment
