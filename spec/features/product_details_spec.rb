@@ -16,18 +16,6 @@ RSpec.feature "Visitor navigates from home page to product detail page", type: :
     end
   end
 
-  # scenario "They see all products" do
-  #   # ACT
-  #   visit root_path
-
-  #   # DEBUG
-  #   save_screenshot
-
-  #   # VERIFY
-  #   #We expect to find 10 as we created 10 above. if change count #, test will fail
-  #   expect(page).to have_css 'article.product', count: 10 
-  # end
-
   scenario "They can click product and go to product details" do
     # ACT
 
@@ -35,25 +23,10 @@ RSpec.feature "Visitor navigates from home page to product detail page", type: :
 
     save_screenshot
  
-    # puts "before #{page}" 
-
-    # click_on "/products/1"
-
-    # page.find :button, 'Details'.click
-
-    # find(href="/products/2").click
-
-    # click_on('/products/2')
-   
-
-    # find_link("Details").first.click
-
-    # puts page.html
-   
+    # puts "before #{page}"
     
-    # find_link("Details", match: :first).click
-
-    # find("Details", match: :first).click
+    # puts page.html
+     
     find(:link, href: '/products/2', class: 'btn btn-default pull-right').click
 
     # Sleep for 2 seconds to allow screenshot to take picture
