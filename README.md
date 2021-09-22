@@ -25,6 +25,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
+Input any date after current date and any 3 numbers for CVC.
+
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
@@ -45,3 +47,18 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Execute Rspec tests in command line via: 
   * bin/rspec spec/________ --format documentation
   * where ________ is the remaining filepath (if nested directory) or filename
+
+## Functionality
+
+# Login/register
+
+![Login/register](https://github.com/alexthemac/Jungle/blob/master/docs/LoginRegisterLogin.gif)
+
+# Add to cart and purchase
+
+![Add to cart and purchase](https://github.com/alexthemac/Jungle/blob/master/docs/AddToCartAndPurchase.gif)
+
+
+# Admin create category and product
+
+![Admin create category and product](https://github.com/alexthemac/Jungle/blob/master/docs/AdminLoginCreate.gif)
