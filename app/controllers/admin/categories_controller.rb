@@ -1,6 +1,6 @@
 class Admin::CategoriesController < ApplicationController
 
-
+  # Prevents accessing admin categories if not logged in (See .env for admin username and password)
   http_basic_authenticate_with name: ENV["USERNAME"], password: ENV["PASSWORD"]
 
 

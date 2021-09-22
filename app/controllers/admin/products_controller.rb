@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
 
+  # Prevents accessing admin products if not logged in (See .env for admin username and password)
   http_basic_authenticate_with name: ENV["USERNAME"], password: ENV["PASSWORD"]
 
 

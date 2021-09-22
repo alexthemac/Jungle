@@ -19,6 +19,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
+9. Can view Jungle application on http://localhost:3000/
 
 ## Stripe Testing
 
@@ -31,3 +32,16 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Testing
+
+* Testing dependencies: 
+  * Rspec 
+  * Capybara 
+  * Poltergeist 
+  * Phantomjs (npm) 
+  * DatabaseCleaner
+* Rspec tests are in spec folder
+* Execute Rspec tests in command line via: 
+  * bin/rspec spec/________ --format documentation
+  * where ________ is the remaining filepath (if nested directory) or filename

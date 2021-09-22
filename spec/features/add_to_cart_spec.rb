@@ -1,5 +1,6 @@
 # To run test, type in command line: bin/rspec spec/features/add_to_cart_spec.rb --format documentation
 # Screenshots stored in tmp/capybara/ once test run
+# MUST ADD js:true TO ALL FEATURES TESTS
 
 require 'rails_helper'
 
