@@ -1,3 +1,6 @@
+# To run test, type in command line: bin/rspec spec/features/home_page_spec.rb --format documentation
+# Screenshots stored in tmp/capybara/ once test run
+
 require 'rails_helper'
 
 RSpec.feature "Visitor navigates to home page", type: :feature, js: true do

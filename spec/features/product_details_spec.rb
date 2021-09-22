@@ -1,3 +1,6 @@
+# To run test, type in command line: bin/rspec spec/features/product_details_spec.rb --format documentation
+# Screenshots stored in tmp/capybara/ once test run
+
 require 'rails_helper'
 
 RSpec.feature "Visitor navigates from home page to product detail page", type: :feature, js: true do
@@ -21,12 +24,14 @@ RSpec.feature "Visitor navigates from home page to product detail page", type: :
 
     visit root_path
 
+    # DEBUG
     save_screenshot
  
     # puts "before #{page}"
     
     # puts page.html
      
+    # ACT
     find(:link, href: '/products/2', class: 'btn btn-default pull-right').click
 
     # Sleep for 2 seconds to allow screenshot to take picture

@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   def new
   end
   
-
   def create
     # Create new user object based on what's entered in form
     user = User.new(user_params)

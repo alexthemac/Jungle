@@ -1,3 +1,6 @@
+# To run test, type in command line: bin/rspec spec/features/add_to_cart_spec.rb --format documentation
+# Screenshots stored in tmp/capybara/ once test run
+
 require 'rails_helper'
 
 RSpec.feature "AddToCarts", type: :feature, js: true do
@@ -23,10 +26,12 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     # DEBUG
     save_screenshot
 
+    # ACT
     click_button('Add', match: :first)
 
     sleep 2
 
+    # DEBUG
     save_screenshot
 
     # VERIFY
